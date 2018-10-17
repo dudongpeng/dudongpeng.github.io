@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>9911</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://smallblack.club/"/>
+  <updated>2018-10-16T12:14:21.357Z</updated>
+  <id>http://smallblack.club/</id>
+  
+  <author>
+    <name>9911</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在hexo中插入本地图片</title>
+    <link href="http://smallblack.club/2018/10/17/%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/"/>
+    <id>http://smallblack.club/2018/10/17/如何在hexo中插入本地图片/</id>
+    <published>2018-10-17T11:15:19.000Z</published>
+    <updated>2018-10-16T12:14:21.357Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><center><strong>在Hexo中插入本地图片 </strong></center></blockquote><a id="more"></a><hr><h2 id="Hexo配置文件的设置"><a href="#Hexo配置文件的设置" class="headerlink" title="Hexo配置文件的设置"></a>Hexo配置文件的设置</h2><p>确保你的Hexo的配置文件_config.yml里面有个这个选项配置，并将其置为true<br><code>post_asset_folder: true</code><br>这个功能实际上是Hexo官方文档中提到的资源文件夹功能，它的作用在于当你使用<br><code>hexo new</code><br>生成一篇新文章时，会在<br><code>\source\_posts</code><br>目录下生成一个文章名.md文件，同时附带生成一个与文章名同名的文件夹，可以用它来存放这篇文章的所有资源，比如图片，附件等</p><h2 id="安装hexo-asset-image插件"><a href="#安装hexo-asset-image插件" class="headerlink" title="安装hexo-asset-image插件"></a>安装hexo-asset-image插件</h2><p>你需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-image，我目前安装的是最新的0.03版本，使用如下命令安装插件<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-<span class="built_in">image</span> --<span class="built_in">save</span></span><br></pre></td></tr></table></figure></p><p>插件安装完以后，实际上是存放在下面的目录文件夹下<br><code>\blog\node_modules\hexo-asset-image</code><br>想要卸载这个插件怎么处理，我听说直接删掉这个文件夹。想删除的可以试试。</p><h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>由于每个md文件都有对应的一个资源文件夹，因此，你首先要把需要插入的图片放到这个资源文件夹下，然后进行路径引用.<br>示例：输入此内容<code>![Hexo](/hexo插入本地图片/Hexo.png)</code>出现下面的内容<br><img src="/2018/10/17/如何在hexo中插入本地图片/Hexo.png" alt="Hexo"></p><h2 id="生成测试"><a href="#生成测试" class="headerlink" title="生成测试"></a>生成测试</h2><p>在很多网友的文章中，这么做就可以了，你可以尝试一下生成并本地测试，看看是否博客的首页及博文的正文页都能够正确显示图片，或者打开博文生成的html源文件，找到图片插入的地方看看src路径是否是对应public后的绝对路径，如下示例这样</p><p><code>&lt;p&gt;&lt;img src=&quot;/2018/10/16/hexo插入本地图片/Hexo.png&quot; alt=&quot;Hexo&quot;&gt;&lt;/p&gt;</code></p><h2 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h2><p>本地source中建立img文件夹<br>&lt;img src=”img/图片名.jpg&gt;<br>这个比较方便</p><h3 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h3><p><a href="https://portal.qiniu.com/" target="_blank" rel="noopener">七牛云</a>需要注册使用</p><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>如有其他问题可以参考下面两个链接<br><a href="https://www.cnblogs.com/codehome/p/8428738.html?utm_source=debugrun&amp;utm_medium=referral" title="感谢" target="_blank" rel="noopener">参考链接1</a><br><a href="http://etrd.org/2017/01/23/hexo%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/" title="感谢" target="_blank" rel="noopener">参考链接2</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;center&gt;&lt;strong&gt;在Hexo中插入本地图片 &lt;/strong&gt;&lt;/center&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Hexo学习笔记" scheme="http://smallblack.club/categories/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="hexo" scheme="http://smallblack.club/tags/hexo/"/>
+    
+      <category term="本地图片" scheme="http://smallblack.club/tags/%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/"/>
+    
+      <category term="hexo-asset-image" scheme="http://smallblack.club/tags/hexo-asset-image/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo入门指南(三)</title>
+    <link href="http://smallblack.club/2018/10/16/hexo%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%973/"/>
+    <id>http://smallblack.club/2018/10/16/hexo入门指南3/</id>
+    <published>2018-10-16T11:15:11.000Z</published>
+    <updated>2018-10-16T11:49:17.484Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><center><strong>hexo文章&amp;草稿</strong></center></blockquote><a id="more"></a><hr><h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><p>新建文章，需要在命令行中输入：</p><pre><code>$ hexo new &quot;new article&quot;</code></pre><p>之后会发现在source/_posts目录下面，多了一个new-article.md的文件。</p><p>打开之后我们会看到：</p><pre><code>---title: new articledate: 2014-11-01 20:10:33tags:---</code></pre><p>文件的开头是属性，采用统一的yaml格式，用三条短横线分隔。下面是文章正文。</p><p>文章的正文支持markdown格式，建议你先学习一下它的语法。markdown不像html似的一大堆标签，很简单，只有几个符号。</p><p>新建、删除或修改文章后，不需要重启hexo server，刷新一下即可预览。</p><h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>文章可以拥有如下属性：</p><table><thead><tr><th>Setting</th><th>Description</th><th>Default</th></tr></thead><tbody><tr><td>layout</td><td>Layout</td><td>post或page</td></tr><tr><td>title</td><td>文章的标题     </td></tr><tr><td>date</td><td>创建日期</td><td>文件的创建日期</td></tr><tr><td>updated</td><td>修改日期</td><td>文件的修改日期</td></tr><tr><td>comments</td><td>是否开启评论</td><td>true</td></tr><tr><td>tags</td><td>标签     </td></tr><tr><td>categories</td><td>分类     </td></tr><tr><td>permalink</td><td>url中的名字</td><td>文件名</td></tr></tbody></table><p>动态博客中通过发布文章页面设置的各种属性，在hexo里要这样设置。</p><h2 id="分类和标签"><a href="#分类和标签" class="headerlink" title="分类和标签"></a>分类和标签</h2><p>例如：</p><pre><code>categories:- 日记- tags:- Hexo- node.js</code></pre><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>同wordpress一样，<code>&lt;!--more--&gt;</code>之上的内容为摘要。</p><p>layout<br>如果你修改了layout，在scaffolds文件夹里一定要有名字对应的模版文件，否则会采用默认模版。</p><h2 id="文件名"><a href="#文件名" class="headerlink" title="文件名"></a>文件名</h2><p>在配置文件中的new_post_name项可以设置文件名，默认为:title，也就是你在命令行输入的名字。</p><p>文件名可以为下面几个变量和字符串常量的任意组合：</p><table><thead><tr><th>Variable</th><th>Description</th></tr></thead><tbody><tr><td>:title</td><td>Escaped title (lower case and replace spaces with dash)</td></tr><tr><td>:year</td><td>Created year (4-digit)</td></tr><tr><td>:month</td><td>Created month (2-digit)</td></tr><tr><td>:i_month</td><td>Created month (Without leading zeros)</td></tr><tr><td>:day</td><td>Created day (2-digit)</td></tr><tr><td>:i_day</td><td>Created day (Without leading zeros)</td></tr></tbody></table><h2 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h2><p>草稿相当于很多博客都有的“私密文章”功能。</p><pre><code>$ hexo new draft &quot;new draft&quot;</code></pre><p>会在source/_drafts目录下生成一个new-draft.md文件。但是这个文件不被显示在页面上，链接也访问不到。也就是说如果你想把某一篇文章移除显示，又不舍得删除，可以把它移动到_drafts目录之中。</p><p>如果你希望强行预览草稿，更改配置文件：</p><pre><code>render_drafts: true</code></pre><p>或者，如下方式启动server：</p><pre><code>$ hexo server --drafts</code></pre><p>下面这条命令可以把草稿变成文章，或者页面：</p><pre><code>$ hexo publish [layout] &lt;filename&gt;</code></pre><h2 id="阅读全文"><a href="#阅读全文" class="headerlink" title="阅读全文"></a>阅读全文</h2><p>在文章中加入 <code>&lt;!-- more --&gt;</code> 可以生成阅读全文的效果</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;center&gt;&lt;strong&gt;hexo文章&amp;amp;草稿&lt;/strong&gt;&lt;/center&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Hexo学习笔记" scheme="http://smallblack.club/categories/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Hexo" scheme="http://smallblack.club/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo入门指南(二)</title>
+    <link href="http://smallblack.club/2018/10/16/hexo%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%972/"/>
+    <id>http://smallblack.club/2018/10/16/hexo入门指南2/</id>
+    <published>2018-10-16T11:00:11.000Z</published>
+    <updated>2018-10-16T12:15:25.545Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><center><strong>hexo上传Git&amp;绑定域名</strong></center></blockquote><a id="more"></a><hr><p><a href="http://www.paopaoche.net/jiaocheng/85988.html" target="_blank" rel="noopener">参考链接1</a><br><a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">参考链接2</a><br><a href="https://www.jianshu.com/p/99373ca5a64c" target="_blank" rel="noopener">参考链接3</a></p><p>参考以上链接，相信你肯定能搭建成功</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;center&gt;&lt;strong&gt;hexo上传Git&amp;amp;绑定域名&lt;/strong&gt;&lt;/center&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Hexo学习笔记" scheme="http://smallblack.club/categories/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Hexo" scheme="http://smallblack.club/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo入门指南(一)</title>
+    <link href="http://smallblack.club/2018/10/16/hexo%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%971/"/>
+    <id>http://smallblack.club/2018/10/16/hexo入门指南1/</id>
+    <published>2018-10-16T07:02:00.000Z</published>
+    <updated>2018-10-16T12:23:59.477Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><center><strong>安装&amp;初始化和配置</strong></center></blockquote><a id="more"></a><hr><p>首先去官网下载最新版本node.js，<br>下载链接：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">点击此处</a><br>安装步骤：<a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">点击此处</a></p><h1 id="第一步安装："><a href="#第一步安装：" class="headerlink" title="第一步安装："></a>第一步安装：</h1><p>输入：<code>npm install hexo -g</code><br><img src="/2018/10/16/hexo入门指南1/first.png" alt="Hexo"><br>然后检查是否安装成功<br>输入：<code>hexo -v</code><br><img src="/2018/10/16/hexo入门指南1/hexo-v.png" alt="Hexo"></p><h1 id="第二步初始化文件夹"><a href="#第二步初始化文件夹" class="headerlink" title="第二步初始化文件夹:"></a>第二步初始化文件夹:</h1><p>输入：<code>hexo init</code><br><img src="/2018/10/16/hexo入门指南1/init.png" alt="Hexo"></p><h1 id="第三步安装所需要的组件"><a href="#第三步安装所需要的组件" class="headerlink" title="第三步安装所需要的组件"></a>第三步安装所需要的组件</h1><p>输入 <code>npm install</code><br><img src="/2018/10/16/hexo入门指南1/npm-install.png" alt="Hexo"><br>输入 <code>hexo g</code> 首次体验hexo<br><img src="/2018/10/16/hexo入门指南1/hexo-g.png" alt="Hexo"><br>输入 <code>hexo s</code> 开启服务器，访问该网址，正式体验hexo<br><img src="/2018/10/16/hexo入门指南1/hexo-s.png" alt="Hexo"><br>输入 <code>npm install hexo-deployer-git -save</code>  此步骤安装一个扩展<br><img src="/2018/10/16/hexo入门指南1/2.png" alt="Hexo"><br>部署成功后访问你的地址：http://用户名.github.io。那么将看到下图表示成功<br><img src="/2018/10/16/hexo入门指南1/Hexo.png" alt="Hexo"><br>可能出现的问题：页面一直无法跳转，那么可能是端口被占用了。此时我们Ctrl+c停止服务器，接着输入 <code>hexo server -p</code> 端口号 来改变端口号</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;center&gt;&lt;strong&gt;安装&amp;amp;初始化和配置&lt;/strong&gt;&lt;/center&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Hexo学习笔记" scheme="http://smallblack.club/categories/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Hexo" scheme="http://smallblack.club/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown基础语法</title>
+    <link href="http://smallblack.club/2018/10/15/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    <id>http://smallblack.club/2018/10/15/markdown基础语法/</id>
+    <published>2018-10-15T13:00:11.000Z</published>
+    <updated>2018-10-16T12:21:54.856Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><center>记录关于一些关于Markdown的基础语法<center></center></center></p></blockquote><a id="more"></a><p>markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p><p>相比WYSIWYG编辑器</p><p>优点：<br>1、因为是纯文本，所以只要支持markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作。<br>2、操作简单。比如:WYSIWYG编辑时标记个标题，先选中内容，再点击导航栏的标题按钮，选择几级标题。要三个步骤。而markdown只需要在标题内容前加#即可</p><p>缺点：<br>1、需要记一些语法（当然，是很简单。五分钟学会）。<br>2、有些平台不支持markdown编辑模式。</p><h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。</p><p>注：标准语法一般在#后跟个空格再写文字，貌似简书不加空格也行。</p><p>示例：</p><pre><code># 这是一级标题## 这是二级标题### 这是三级标题#### 这是四级标题##### 这是五级标题###### 这是六级标题</code></pre><p>效果如下：</p><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><p>加粗<br>要加粗的文字左右分别用两个*号包起来</p><p>斜体<br>要倾斜的文字左右分别用一个*号包起来</p><p>斜体加粗<br>要倾斜和加粗的文字左右分别用三个*号包起来</p><p>删除线<br>要加删除线的文字左右分别用两个~~号包起来</p><p>示例：</p><pre><code>**这是加粗的文字***这是倾斜的文字*`***这是斜体加粗的文字***~~这是加删除线的文字~~</code></pre><p>效果如下：</p><p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em>`<br><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del></p><h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;<br>n个…<br>貌似可以一直加下去，但没神马卵用</p><p>示例：</p><pre><code>&gt;这是引用的内容&gt;&gt;这是引用的内容&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</code></pre><p>效果如下：</p><blockquote><p>这是引用的内容</p><blockquote><p>这是引用的内容</p><blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><p>这是引用的内容</p></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote><h1 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h1><p>三个或者三个以上的 - 或者 * 都可以。</p><p>示例：</p><pre><code>-------********</code></pre><h2 id="效果如下："><a href="#效果如下：" class="headerlink" title="效果如下："></a>效果如下：</h2><hr><hr><hr><p>可以看到，显示效果是一样的。</p><h1 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h1><p>语法：</p><pre><code>![图片alt](图片地址 &apos;&apos;图片title&apos;&apos;)图片alt就是显示在图片下面的文字，相当于对图片内容的解释。图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</code></pre><p>示例：</p><pre><code>![blockchain](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg &quot;区块链&quot;)</code></pre><p>效果如下：<br><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg" alt="blockchain" title="区块链"></p><p>上传本地图片直接点击导航栏的图片标志，选择图片即可</p><h1 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h1><p>语法：</p><pre><code>[超链接名](超链接地址 &quot;超链接title&quot;)title可加可不加</code></pre><p>示例：</p><pre><code>[简书](http://jianshu.com)[百度](http://baidu.com)</code></pre><p>效果如下：<br>    <a href="http://jianshu.com" target="_blank" rel="noopener">简书</a><br>    <a href="http://baidu.com" target="_blank" rel="noopener">百度</a></p><p>注：markdown本身语法不支持链接在新页面中打开，貌似简书做了处理，是可以的。别的平台可能就不行了，如果想要在新页面中打开的话可以用html语言的a标签代替。</p><pre><code>&lt;a href=&quot;超链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;例&lt;a href=&quot;https://www.jianshu.com/u/1f5ac0cf6a8b&quot; target=&quot;_blank&quot;&gt;简书&lt;/a&gt;</code></pre><h1 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h1><ul><li>无序列表</li></ul><p>语法：<br>无序列表用 - + * 任何一种都可以</p><pre><code>    - 列表内容    + 列表内容    * 列表内容注意：- + * 跟内容之间都要有一个空格</code></pre><p>效果如下：</p><ul><li>列表内容</li></ul><ul><li>列表内容</li></ul><ul><li>列表内容</li></ul><p>有序列表<br>语法：<br>数字加点</p><pre><code>1.列表内容2.列表内容3.列表内容注意：序号跟内容之间要有空格</code></pre><p>效果如下：</p><p>1.列表内容<br>2.列表内容<br>3.列表内容</p><ul><li>列表嵌套<br>上一级和下一级之间敲三个空格即可</li><li>一级无序列表内容   <ul><li>二级无序列表内容</li><li>二级无序列表内容</li><li>二级无序列表内容</li></ul></li></ul><ul><li><p>一级无序列表内容</p><ul><li>二级有序列表内容</li><li>二级有序列表内容</li><li>二级有序列表内容</li></ul></li></ul><p>1.一级有序列表内容</p><ul><li>二级无序列表内容 </li><li>二级无序列表内容</li><li>二级无序列表内容</li></ul><p>2.一级有序列表内容</p><ol><li>二级有序列表内容 </li><li>二级有序列表内容</li><li>二级有序列表内容</li></ol><h1 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h1><p>语法：</p><pre><code>表头|表头|表头---|:--:|---:内容|内容|内容内容|内容|内容第二行分割表头和内容。- 有一个就行，为了对齐，多加了几个文字默认居左-两边加：表示文字居中-右边加：表示文字居右注：原生的语法两边都要用 | 包起来。此处省略效果如下：</code></pre><table><thead><tr><th>姓名</th><th>技能</th><th>排行</th></tr></thead><tbody><tr><td>刘备</td><td>哭</td><td>大哥</td></tr><tr><td>关羽</td><td>打</td><td>二哥</td></tr><tr><td>张飞</td><td>骂</td><td>三弟</td></tr></tbody></table><h1 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h1><p>语法：<br>单行代码：代码之间分别用一个反引号包起来</p><pre><code>`代码内容`</code></pre><p>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">代码...</span><br><span class="line">代码...</span><br><span class="line">代码...</span><br></pre></td></tr></table></figure><pre><code>注：为了防止转译，前后三个反引号处加了小括号，实际是没有的。这里只是用来演示，实际中去掉两边小括号即可。</code></pre><p>示例：</p><p>单行代码</p><p><code>create database hero;</code><br>代码块<br>    <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function <span class="function"><span class="title">fun</span><span class="params">()</span></span>&#123;</span><br><span class="line">     echo <span class="string">"这是一句非常牛逼的代码"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="title">fun</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure></p><p>效果如下：</p><p>单行代码</p><pre><code>create database hero;</code></pre><p>代码块</p><pre><code>    function fun(){      echo &quot;这是一句非常牛逼的代码&quot;;    }fun();</code></pre><h1 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h1><div id="flowchart-0" class="flow-chart"></div><p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">chatst=>start: 开始op=>operation: My Operationcond=>condition: Yes or No?e=>endst->op->condcond(yes)->econd(no)->op&</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;center&gt;记录关于一些关于Markdown的基础语法&lt;center&gt;&lt;/center&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Markdown" scheme="http://smallblack.club/categories/Markdown/"/>
+    
+    
+      <category term="Markdown" scheme="http://smallblack.club/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git本地仓库与远程仓库关联</title>
+    <link href="http://smallblack.club/2018/10/15/git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%85%B3%E8%81%94/"/>
+    <id>http://smallblack.club/2018/10/15/git本地仓库与远程仓库关联/</id>
+    <published>2018-10-15T11:15:11.000Z</published>
+    <updated>2018-10-16T12:04:11.022Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本篇内容介绍关于git本地仓库与远程仓库关联,基于已经安装好git并会基础使用的</p></blockquote><a id="more"></a><h1 id="第一步：配置SSH-KEY"><a href="#第一步：配置SSH-KEY" class="headerlink" title="第一步：配置SSH KEY"></a>第一步：配置SSH KEY</h1><p>默认你已经安装好git客户端，这里我们使用在git bash操作<br>首先输入<br><code>$ ssh -T git@github.com</code><br>查看是否连接<br>如果未连接过：<br>再次输入cd ~/.ssh，检查是否存在.ssh的文件夹</p><blockquote><p>如果存在，输入ls，列出该文件下的内容。<br><code>$ ls id_rsa id-rsa.pub known-hosts</code></p></blockquote><p>输入<code>ssh-keygen -t rsa -C “你的github邮箱”</code>连续三个回车，生成密钥，最后得到了两个文件：id_rsa和id_rsa.pub（默认存储路径是：C:\Users\Administrator.ssh）</p><p>输入<code>eval &quot;$(ssh-agent -s)&quot;</code>添加密钥到ssh-agent</p><p>再输入<code>ssh-add ~/.ssh/id_rsa</code>添加生成的SSH key到ssh-agent</p><p>再次输入<code>ssh -T git@github.com</code>测试添加ssh是否成功。如果看到Hi后面是你的用户名，就说明成功了</p><h1 id="第二步：登录GitHub"><a href="#第二步：登录GitHub" class="headerlink" title="第二步：登录GitHub"></a>第二步：登录GitHub</h1><p>打开”SSH Keys”页面，<a href="https://github.com/settings/ssh" target="_blank" rel="noopener">点击这里</a> </p><p>“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容，确认即可</p><h1 id="第三步：在git上创建一个仓库-注意仓库名字要和本地一样-步骤省略"><a href="#第三步：在git上创建一个仓库-注意仓库名字要和本地一样-步骤省略" class="headerlink" title="第三步：在git上创建一个仓库 注意仓库名字要和本地一样(步骤省略)"></a>第三步：在git上创建一个仓库 注意仓库名字要和本地一样(步骤省略)</h1><h1 id="第四步：推送本地工程到github仓库"><a href="#第四步：推送本地工程到github仓库" class="headerlink" title="第四步：推送本地工程到github仓库"></a>第四步：推送本地工程到github仓库</h1><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>-git init                     </span><br><span class="line"><span class="comment">#本地仓库初始化，执行完后会在工程目录下生成一个.git的隐藏目录</span></span><br><span class="line"></span><br><span class="line"><span class="number">2</span>-git <span class="keyword">add</span><span class="bash"> .               </span></span><br><span class="line"><span class="bash"><span class="comment">#添加所有文件到本地索引，命令用法：git add &lt;file&gt;</span></span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">3-git commit -m <span class="string">"My first commit operation"</span>   </span></span><br><span class="line"><span class="bash"><span class="comment">#提交修改到本地仓库，-m选项添加提交注释</span></span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">4-git remote add origin git@github.com:mayouchen123/learngit.git</span></span><br><span class="line"><span class="bash"><span class="comment">#添加远程仓库地址，保存在origin变量中</span></span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">5-git push origin master      </span></span><br><span class="line"><span class="bash"><span class="comment">#按照前一条命令中origin给定的github地址推送到github仓库的master分支</span></span></span><br></pre></td></tr></table></figure><p>可能遇到的问题：假如ssh-key配置失败，那么只要以下步骤就能完全解决</p><p>首先，清除所有的key-pair<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-<span class="keyword">add</span><span class="bash"> -D</span></span><br><span class="line"><span class="bash">rm -r ~/.ssh</span></span><br></pre></td></tr></table></figure></p><p>删除你在github中的public-key</p><p>重新生成ssh密钥对<br><code>ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot;</code></p><p>接下来正常操作<br>在github上添加公钥public-key:<br>1、首先在你的终端运行 xclip -sel c ~/.ssh/id_rsa.pub将公钥内容复制到剪切板<br>2、在github上添加公钥时，直接复制即可<br>3、保存</p><p><a href="https://blog.csdn.net/qq_24147051/article/details/64923471" target="_blank" rel="noopener">参考链接</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本篇内容介绍关于git本地仓库与远程仓库关联,基于已经安装好git并会基础使用的&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Git学习笔记" scheme="http://smallblack.club/categories/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Git" scheme="http://smallblack.club/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的第一篇博客</title>
+    <link href="http://smallblack.club/2018/10/11/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://smallblack.club/2018/10/11/我的第一篇博客/</id>
+    <published>2018-10-11T12:19:20.000Z</published>
+    <updated>2018-10-16T12:13:32.998Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="这是我的第一篇博客"><a href="#这是我的第一篇博客" class="headerlink" title="这是我的第一篇博客"></a><center>这是我的第一篇博客<center></center></center></h2><h2 id="你好，朋友！"><a href="#你好，朋友！" class="headerlink" title="你好，朋友！"></a><center>你好，朋友！<center></center></center></h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;这是我的第一篇博客&quot;&gt;&lt;a href=&quot;#这是我的第一篇博客&quot; class=&quot;headerlink&quot; title=&quot;这是我的第一篇博客&quot;&gt;&lt;/a&gt;&lt;center&gt;这是我的第一篇博客&lt;center&gt;&lt;/center&gt;&lt;/center&gt;&lt;/h2&gt;&lt;h2 id=&quot;你好，
+      
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://smallblack.club/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://smallblack.club/2018/10/11/hello-world/"/>
+    <id>http://smallblack.club/2018/10/11/hello-world/</id>
+    <published>2018-10-11T09:09:33.139Z</published>
+    <updated>2018-10-16T06:18:24.808Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>!！这是你的第一篇文章。查看<a href="https://hexo.io/docs/" target="_blank" rel="noopener">文档</a>以获取更多信息。如果您在使用Hexo时遇到任何问题，可以在<a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">故障排除</a> 中找到答案，或者您可以在<a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.上询问我。</p><blockquote><h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1></blockquote><a id="more"></a><h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"我的新帖子"</span></span><br></pre></td></tr></table></figure><p>更多信息 : <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">写作</a></p><h3 id="运行服务器"><a href="#运行服务器" class="headerlink" title="运行服务器"></a>运行服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>更多信息 : <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">服务器</a></p><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>更多信息 : <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">生成</a></p><h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">部署</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;欢迎来到&lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;!！这是你的第一篇文章。查看&lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文档&lt;/a&gt;以获取更多信息。如果您在使用Hexo时遇到任何问题，可以在&lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;故障排除&lt;/a&gt; 中找到答案，或者您可以在&lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.上询问我。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h1 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h1&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

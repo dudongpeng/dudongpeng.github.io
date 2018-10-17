@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+
+Disallow: /fonts/
+Disallow: /vendors/
+
+Sitemap: http://www.smallblack.club/sitemap.xml
+Sitemap: http://www.smallblack.club/baidusitemap.xml

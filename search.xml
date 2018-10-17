@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[如何在hexo中插入本地图片]]></title>
+    <url>%2F2018%2F10%2F17%2F%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%2F</url>
+    <content type="text"><![CDATA[在Hexo中插入本地图片 Hexo配置文件的设置确保你的Hexo的配置文件_config.yml里面有个这个选项配置，并将其置为truepost_asset_folder: true这个功能实际上是Hexo官方文档中提到的资源文件夹功能，它的作用在于当你使用hexo new生成一篇新文章时，会在\source\_posts目录下生成一个文章名.md文件，同时附带生成一个与文章名同名的文件夹，可以用它来存放这篇文章的所有资源，比如图片，附件等 安装hexo-asset-image插件你需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-image，我目前安装的是最新的0.03版本，使用如下命令安装插件1npm install hexo-asset-image --save 插件安装完以后，实际上是存放在下面的目录文件夹下\blog\node_modules\hexo-asset-image想要卸载这个插件怎么处理，我听说直接删掉这个文件夹。想删除的可以试试。 插入图片由于每个md文件都有对应的一个资源文件夹，因此，你首先要把需要插入的图片放到这个资源文件夹下，然后进行路径引用.示例：输入此内容![Hexo](/hexo插入本地图片/Hexo.png)出现下面的内容 生成测试在很多网友的文章中，这么做就可以了，你可以尝试一下生成并本地测试，看看是否博客的首页及博文的正文页都能够正确显示图片，或者打开博文生成的html源文件，找到图片插入的地方看看src路径是否是对应public后的绝对路径，如下示例这样 &lt;p&gt;&lt;img src=&quot;/2018/10/16/hexo插入本地图片/Hexo.png&quot; alt=&quot;Hexo&quot;&gt;&lt;/p&gt; 其他方法本地source中建立img文件夹&lt;img src=”img/图片名.jpg&gt;这个比较方便 图床七牛云需要注册使用 参考文献如有其他问题可以参考下面两个链接参考链接1参考链接2]]></content>
+      <categories>
+        <category>Hexo学习笔记</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>本地图片</tag>
+        <tag>hexo-asset-image</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo入门指南(三)]]></title>
+    <url>%2F2018%2F10%2F16%2Fhexo%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%973%2F</url>
+    <content type="text"><![CDATA[hexo文章&amp;草稿 新建文章新建文章，需要在命令行中输入： $ hexo new &quot;new article&quot; 之后会发现在source/_posts目录下面，多了一个new-article.md的文件。 打开之后我们会看到： --- title: new article date: 2014-11-01 20:10:33 tags: --- 文件的开头是属性，采用统一的yaml格式，用三条短横线分隔。下面是文章正文。 文章的正文支持markdown格式，建议你先学习一下它的语法。markdown不像html似的一大堆标签，很简单，只有几个符号。 新建、删除或修改文章后，不需要重启hexo server，刷新一下即可预览。 属性文章可以拥有如下属性： Setting Description Default layout Layout post或page title 文章的标题 date 创建日期 文件的创建日期 updated 修改日期 文件的修改日期 comments 是否开启评论 true tags 标签 categories 分类 permalink url中的名字 文件名 动态博客中通过发布文章页面设置的各种属性，在hexo里要这样设置。 分类和标签例如： categories: - 日记 - tags: - Hexo - node.js 摘要同wordpress一样，&lt;!--more--&gt;之上的内容为摘要。 layout如果你修改了layout，在scaffolds文件夹里一定要有名字对应的模版文件，否则会采用默认模版。 文件名在配置文件中的new_post_name项可以设置文件名，默认为:title，也就是你在命令行输入的名字。 文件名可以为下面几个变量和字符串常量的任意组合： Variable Description :title Escaped title (lower case and replace spaces with dash) :year Created year (4-digit) :month Created month (2-digit) :i_month Created month (Without leading zeros) :day Created day (2-digit) :i_day Created day (Without leading zeros) 草稿草稿相当于很多博客都有的“私密文章”功能。 $ hexo new draft &quot;new draft&quot; 会在source/_drafts目录下生成一个new-draft.md文件。但是这个文件不被显示在页面上，链接也访问不到。也就是说如果你想把某一篇文章移除显示，又不舍得删除，可以把它移动到_drafts目录之中。 如果你希望强行预览草稿，更改配置文件： render_drafts: true 或者，如下方式启动server： $ hexo server --drafts 下面这条命令可以把草稿变成文章，或者页面： $ hexo publish [layout] &lt;filename&gt; 阅读全文在文章中加入 &lt;!-- more --&gt; 可以生成阅读全文的效果]]></content>
+      <categories>
+        <category>Hexo学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo入门指南(二)]]></title>
+    <url>%2F2018%2F10%2F16%2Fhexo%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%972%2F</url>
+    <content type="text"><![CDATA[hexo上传Git&amp;绑定域名 参考链接1参考链接2参考链接3 参考以上链接，相信你肯定能搭建成功]]></content>
+      <categories>
+        <category>Hexo学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo入门指南(一)]]></title>
+    <url>%2F2018%2F10%2F16%2Fhexo%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%971%2F</url>
+    <content type="text"><![CDATA[安装&amp;初始化和配置 首先去官网下载最新版本node.js，下载链接：点击此处安装步骤：点击此处 第一步安装：输入：npm install hexo -g然后检查是否安装成功输入：hexo -v 第二步初始化文件夹:输入：hexo init 第三步安装所需要的组件输入 npm install输入 hexo g 首次体验hexo输入 hexo s 开启服务器，访问该网址，正式体验hexo输入 npm install hexo-deployer-git -save 此步骤安装一个扩展部署成功后访问你的地址：http://用户名.github.io。那么将看到下图表示成功可能出现的问题：页面一直无法跳转，那么可能是端口被占用了。此时我们Ctrl+c停止服务器，接着输入 hexo server -p 端口号 来改变端口号]]></content>
+      <categories>
+        <category>Hexo学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[markdown基础语法]]></title>
+    <url>%2F2018%2F10%2F15%2Fmarkdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[记录关于一些关于Markdown的基础语法 markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。 相比WYSIWYG编辑器 优点：1、因为是纯文本，所以只要支持markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作。2、操作简单。比如:WYSIWYG编辑时标记个标题，先选中内容，再点击导航栏的标题按钮，选择几级标题。要三个步骤。而markdown只需要在标题内容前加#即可 缺点：1、需要记一些语法（当然，是很简单。五分钟学会）。2、有些平台不支持markdown编辑模式。 一、标题在想要设置为标题的文字前面加#来表示一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。 注：标准语法一般在#后跟个空格再写文字，貌似简书不加空格也行。 示例： # 这是一级标题 ## 这是二级标题 ### 这是三级标题 #### 这是四级标题 ##### 这是五级标题 ###### 这是六级标题 效果如下： 这是一级标题这是二级标题这是三级标题这是四级标题这是五级标题这是六级标题二、字体加粗要加粗的文字左右分别用两个*号包起来 斜体要倾斜的文字左右分别用一个*号包起来 斜体加粗要倾斜和加粗的文字左右分别用三个*号包起来 删除线要加删除线的文字左右分别用两个~~号包起来 示例： **这是加粗的文字** *这是倾斜的文字*` ***这是斜体加粗的文字*** ~~这是加删除线的文字~~ 效果如下： 这是加粗的文字这是倾斜的文字`这是斜体加粗的文字这是加删除线的文字 三、引用在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;n个…貌似可以一直加下去，但没神马卵用 示例： &gt;这是引用的内容 &gt;&gt;这是引用的内容 &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容 效果如下： 这是引用的内容 这是引用的内容 这是引用的内容 四、分割线三个或者三个以上的 - 或者 * 都可以。 示例： --- ---- *** ***** 效果如下： 可以看到，显示效果是一样的。 五、图片语法： ![图片alt](图片地址 &apos;&apos;图片title&apos;&apos;) 图片alt就是显示在图片下面的文字，相当于对图片内容的解释。 图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加 示例： ![blockchain](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/ u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg &quot;区块链&quot;) 效果如下： 上传本地图片直接点击导航栏的图片标志，选择图片即可 六、超链接语法： [超链接名](超链接地址 &quot;超链接title&quot;) title可加可不加 示例： [简书](http://jianshu.com) [百度](http://baidu.com) 效果如下： 简书 百度 注：markdown本身语法不支持链接在新页面中打开，貌似简书做了处理，是可以的。别的平台可能就不行了，如果想要在新页面中打开的话可以用html语言的a标签代替。 &lt;a href=&quot;超链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt; 例&lt;a href=&quot;https://www.jianshu.com/u/1f5ac0cf6a8b&quot; target=&quot;_blank&quot;&gt;简书&lt;/a&gt; 七、列表 无序列表 语法：无序列表用 - + * 任何一种都可以 - 列表内容 + 列表内容 * 列表内容 注意：- + * 跟内容之间都要有一个空格 效果如下： 列表内容 列表内容 列表内容 有序列表语法：数字加点 1.列表内容 2.列表内容 3.列表内容 注意：序号跟内容之间要有空格 效果如下： 1.列表内容2.列表内容3.列表内容 列表嵌套上一级和下一级之间敲三个空格即可 一级无序列表内容 二级无序列表内容 二级无序列表内容 二级无序列表内容 一级无序列表内容 二级有序列表内容 二级有序列表内容 二级有序列表内容 1.一级有序列表内容 二级无序列表内容 二级无序列表内容 二级无序列表内容 2.一级有序列表内容 二级有序列表内容 二级有序列表内容 二级有序列表内容 八、表格语法： 表头|表头|表头 ---|:--:|---: 内容|内容|内容 内容|内容|内容 第二行分割表头和内容。 - 有一个就行，为了对齐，多加了几个 文字默认居左 -两边加：表示文字居中 -右边加：表示文字居右 注：原生的语法两边都要用 | 包起来。此处省略 效果如下： 姓名 技能 排行 刘备 哭 大哥 关羽 打 二哥 张飞 骂 三弟 九、代码语法：单行代码：代码之间分别用一个反引号包起来 `代码内容` 代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行 123代码...代码...代码... 注：为了防止转译，前后三个反引号处加了小括号，实际是没有的。这里只是用来演示，实际中去掉两边小括号即可。 示例： 单行代码 create database hero;代码块 1234function fun()&#123; echo "这是一句非常牛逼的代码";&#125;fun(); 效果如下： 单行代码 create database hero; 代码块 function fun(){ echo &quot;这是一句非常牛逼的代码&quot;; } fun(); 十、流程图 chat st=>start: 开始 op=>operation: My Operation cond=>condition: Yes or No? e=>end st->op->cond cond(yes)->e cond(no)->op &{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12} var code = document.getElementById("flowchart-0-code").value; var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value)); var diagram = flowchart.parse(code); diagram.drawSVG("flowchart-0", options);]]></content>
+      <categories>
+        <category>Markdown</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git本地仓库与远程仓库关联]]></title>
+    <url>%2F2018%2F10%2F15%2Fgit%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%85%B3%E8%81%94%2F</url>
+    <content type="text"><![CDATA[本篇内容介绍关于git本地仓库与远程仓库关联,基于已经安装好git并会基础使用的 第一步：配置SSH KEY默认你已经安装好git客户端，这里我们使用在git bash操作首先输入$ ssh -T git@github.com查看是否连接如果未连接过：再次输入cd ~/.ssh，检查是否存在.ssh的文件夹 如果存在，输入ls，列出该文件下的内容。$ ls id_rsa id-rsa.pub known-hosts 输入ssh-keygen -t rsa -C “你的github邮箱”连续三个回车，生成密钥，最后得到了两个文件：id_rsa和id_rsa.pub（默认存储路径是：C:\Users\Administrator.ssh） 输入eval &quot;$(ssh-agent -s)&quot;添加密钥到ssh-agent 再输入ssh-add ~/.ssh/id_rsa添加生成的SSH key到ssh-agent 再次输入ssh -T git@github.com测试添加ssh是否成功。如果看到Hi后面是你的用户名，就说明成功了 第二步：登录GitHub打开”SSH Keys”页面，点击这里 “Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容，确认即可 第三步：在git上创建一个仓库 注意仓库名字要和本地一样(步骤省略)第四步：推送本地工程到github仓库12345678910111213141-git init #本地仓库初始化，执行完后会在工程目录下生成一个.git的隐藏目录2-git add . #添加所有文件到本地索引，命令用法：git add &lt;file&gt;3-git commit -m "My first commit operation" #提交修改到本地仓库，-m选项添加提交注释4-git remote add origin git@github.com:mayouchen123/learngit.git#添加远程仓库地址，保存在origin变量中5-git push origin master #按照前一条命令中origin给定的github地址推送到github仓库的master分支 可能遇到的问题：假如ssh-key配置失败，那么只要以下步骤就能完全解决 首先，清除所有的key-pair12ssh-add -Drm -r ~/.ssh 删除你在github中的public-key 重新生成ssh密钥对ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot; 接下来正常操作在github上添加公钥public-key:1、首先在你的终端运行 xclip -sel c ~/.ssh/id_rsa.pub将公钥内容复制到剪切板2、在github上添加公钥时，直接复制即可3、保存 参考链接]]></content>
+      <categories>
+        <category>Git学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我的第一篇博客]]></title>
+    <url>%2F2018%2F10%2F11%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[这是我的第一篇博客你好，朋友！]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F10%2F11%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[欢迎来到Hexo!！这是你的第一篇文章。查看文档以获取更多信息。如果您在使用Hexo时遇到任何问题，可以在故障排除 中找到答案，或者您可以在GitHub.上询问我。 Quick Start 创建一个新帖子1$ hexo new "我的新帖子" 更多信息 : 写作 运行服务器1$ hexo server 更多信息 : 服务器 生成静态文件1$ hexo generate 更多信息 : 生成 部署到远程站点1$ hexo deploy 更多信息: 部署]]></content>
+  </entry>
+</search>
