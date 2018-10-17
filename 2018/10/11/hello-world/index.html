@@ -521,6 +521,10 @@
           
 
   
+		<div id="gitalk-container">
+		</div>
+ 
+  
 
 
 
@@ -624,6 +628,12 @@
                     <a href="https://user.qzone.qq.com/1106115374" target="_blank" title="QQ空间">
                       
                         <i class="fa fa-fw fa-globe"></i>QQ空间</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=1106115374&site=qq&menu=yes" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
                   </span>
                 
             </div>
@@ -889,6 +899,21 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '733d81aea9bf6b288686',
+          clientSecret: 'dfbbfdfa16fc860dc104d9ec61c014c886f97ef7',
+          repo: 'https://github.com/dudongpeng/dudongpeng.github.io',
+          owner: '1564494302@qq.com',
+          admin: [''],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
