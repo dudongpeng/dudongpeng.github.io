@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于我的博客的各种个性化设置]]></title>
+    <url>%2F2018%2F10%2F17%2F%E6%90%AD%E5%BB%BA%E4%B8%AA%E6%80%A7%E5%8C%96%E4%B8%BB%E9%A2%98%E9%81%87%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[关于我的博客采用的各种个性化设置 内置优化于最近本人接触了hexo搭建博客，并使用了NEXT主题，并参照各位前辈的资料对自己的博客进行了个性化， 关于博客页脚爱心logo的更换，以及文字的更改，每篇博客之间分割线的长度的更改，以及优化博客加载速度，我参考了Zcc’s blog的博文，在此感谢。 以下是我曾经参照的博客链接点击跳转不错的一篇博文，很全面，解决了我很多问题，在此感谢Christmas。点击跳转同样很不错的一篇博文，询问了一些问题博主也给予我解答了在此感谢Moorez 点击跳转此文章详细介绍了如何修改配置文章，以及配置文章的功能，在此感谢海天心Y2kking点击跳转不错的一篇博文，很全面，解决了我很多问题，在此感谢夏末]]></content>
+      <categories>
+        <category>Hexo学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用hexo遇到的问题]]></title>
+    <url>%2F2018%2F10%2F17%2F%E5%88%97%E5%87%BA%E4%B8%80%E4%BA%9B%E6%9C%AC%E4%BA%BA%E4%BD%BF%E7%94%A8hexo%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[使用hexo遇到的问题 列举一些曾经困扰到我的hexo问题，希望能帮助更多新人。 Hexo 部署到 Github Pages 文件夹大小写问题我是参考作者Yizhao的Hexo 部署到 Github Pages 文件夹大小写问题注意：我只参照了这一句，了进入到博客项目中 .deploy_git文件夹，修改 .git 下的 config 文件，将 ignorecase=true 改为 ignorecase=false 。最后成功解决问题，感谢。 以后遇到问题会更新此文章。]]></content>
+      <categories>
+        <category>Hexo学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[如何在hexo中插入本地图片]]></title>
     <url>%2F2018%2F10%2F17%2F%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%2F</url>
     <content type="text"><![CDATA[在Hexo中插入本地图片 Hexo配置文件的设置确保你的Hexo的配置文件_config.yml里面有个这个选项配置，并将其置为truepost_asset_folder: true这个功能实际上是Hexo官方文档中提到的资源文件夹功能，它的作用在于当你使用hexo new生成一篇新文章时，会在\source\_posts目录下生成一个文章名.md文件，同时附带生成一个与文章名同名的文件夹，可以用它来存放这篇文章的所有资源，比如图片，附件等 安装hexo-asset-image插件你需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-image，我目前安装的是最新的0.03版本，使用如下命令安装插件1npm install hexo-asset-image --save 插件安装完以后，实际上是存放在下面的目录文件夹下\blog\node_modules\hexo-asset-image想要卸载这个插件怎么处理，我听说直接删掉这个文件夹。想删除的可以试试。 插入图片由于每个md文件都有对应的一个资源文件夹，因此，你首先要把需要插入的图片放到这个资源文件夹下，然后进行路径引用.示例：输入此内容![Hexo](/hexo插入本地图片/Hexo.png)出现下面的内容 生成测试在很多网友的文章中，这么做就可以了，你可以尝试一下生成并本地测试，看看是否博客的首页及博文的正文页都能够正确显示图片，或者打开博文生成的html源文件，找到图片插入的地方看看src路径是否是对应public后的绝对路径，如下示例这样 &lt;p&gt;&lt;img src=&quot;/2018/10/16/hexo插入本地图片/Hexo.png&quot; alt=&quot;Hexo&quot;&gt;&lt;/p&gt; 其他方法本地source中建立img文件夹&lt;img src=”img/图片名.jpg&gt;这个比较方便 图床七牛云需要注册使用 参考文献如有其他问题可以参考下面两个链接参考链接1参考链接2]]></content>
