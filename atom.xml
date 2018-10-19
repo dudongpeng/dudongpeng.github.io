@@ -69,7 +69,7 @@
     <link href="http://smallblack.club/2018/10/17/%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/"/>
     <id>http://smallblack.club/2018/10/17/如何在hexo中插入本地图片/</id>
     <published>2018-10-17T11:15:19.000Z</published>
-    <updated>2018-10-16T12:14:21.357Z</updated>
+    <updated>2018-10-19T02:55:48.616Z</updated>
     
     <content type="html"><![CDATA[<blockquote><center><strong>在Hexo中插入本地图片 </strong></center></blockquote><a id="more"></a><hr><h2 id="Hexo配置文件的设置"><a href="#Hexo配置文件的设置" class="headerlink" title="Hexo配置文件的设置"></a>Hexo配置文件的设置</h2><p>确保你的Hexo的配置文件_config.yml里面有个这个选项配置，并将其置为true<br><code>post_asset_folder: true</code><br>这个功能实际上是Hexo官方文档中提到的资源文件夹功能，它的作用在于当你使用<br><code>hexo new</code><br>生成一篇新文章时，会在<br><code>\source\_posts</code><br>目录下生成一个文章名.md文件，同时附带生成一个与文章名同名的文件夹，可以用它来存放这篇文章的所有资源，比如图片，附件等</p><h2 id="安装hexo-asset-image插件"><a href="#安装hexo-asset-image插件" class="headerlink" title="安装hexo-asset-image插件"></a>安装hexo-asset-image插件</h2><p>你需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-image，我目前安装的是最新的0.03版本，使用如下命令安装插件<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-<span class="built_in">image</span> --<span class="built_in">save</span></span><br></pre></td></tr></table></figure></p><p>插件安装完以后，实际上是存放在下面的目录文件夹下<br><code>\blog\node_modules\hexo-asset-image</code><br>想要卸载这个插件怎么处理，我听说直接删掉这个文件夹。想删除的可以试试。</p><h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>由于每个md文件都有对应的一个资源文件夹，因此，你首先要把需要插入的图片放到这个资源文件夹下，然后进行路径引用.<br>示例：输入此内容<code>![Hexo](/hexo插入本地图片/Hexo.png)</code>出现下面的内容<br><img src="/2018/10/17/如何在hexo中插入本地图片/Hexo.png" alt="Hexo"></p><h2 id="生成测试"><a href="#生成测试" class="headerlink" title="生成测试"></a>生成测试</h2><p>在很多网友的文章中，这么做就可以了，你可以尝试一下生成并本地测试，看看是否博客的首页及博文的正文页都能够正确显示图片，或者打开博文生成的html源文件，找到图片插入的地方看看src路径是否是对应public后的绝对路径，如下示例这样</p><p><code>&lt;p&gt;&lt;img src=&quot;/2018/10/16/hexo插入本地图片/Hexo.png&quot; alt=&quot;Hexo&quot;&gt;&lt;/p&gt;</code></p><h2 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h2><p>本地source中建立img文件夹<br>&lt;img src=”img/图片名.jpg&gt;<br>这个比较方便</p><h3 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h3><p><a href="https://portal.qiniu.com/" target="_blank" rel="noopener">七牛云</a>需要注册使用</p><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>如有其他问题可以参考下面两个链接<br><a href="https://www.cnblogs.com/codehome/p/8428738.html?utm_source=debugrun&amp;utm_medium=referral" title="感谢" target="_blank" rel="noopener">参考链接1</a><br><a href="http://etrd.org/2017/01/23/hexo%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/" title="感谢" target="_blank" rel="noopener">参考链接2</a></p>]]></content>
     
@@ -84,11 +84,9 @@
       <category term="Hexo学习笔记" scheme="http://smallblack.club/categories/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="hexo" scheme="http://smallblack.club/tags/hexo/"/>
+      <category term="Hexo" scheme="http://smallblack.club/tags/Hexo/"/>
     
       <category term="本地图片" scheme="http://smallblack.club/tags/%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/"/>
-    
-      <category term="hexo-asset-image" scheme="http://smallblack.club/tags/hexo-asset-image/"/>
     
   </entry>
   
