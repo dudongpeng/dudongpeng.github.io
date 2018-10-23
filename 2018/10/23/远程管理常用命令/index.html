@@ -102,18 +102,22 @@
 
 
 
-<meta name="description" content="常用Linux命令的基本使用目标 理解学习 Linux 终端命令的原因 常用 Linux 命令体验  01. 学习 Linux 终端命令的原因 Linux 刚面世时并没有图形界面，所有的操作全靠命令完成，如 磁盘操作、文件存取、目录操作、进程管理、文件权限 设定等 在职场中，大量的 服务器维护工作 都是在 远程 通过 SSH 客户端 来完成的，并没有图形界面，所有的维护工作都需要通过命令来完成">
+<meta name="description" content="远程管理常用命令">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用Linux命令的基本使用">
-<meta property="og:url" content="http://smallblack.club/2018/10/16/常用的Linux命令的基本使用/index.html">
+<meta property="og:title" content="远程管理常用命令">
+<meta property="og:url" content="http://smallblack.club/2018/10/23/远程管理常用命令/index.html">
 <meta property="og:site_name" content="9911">
-<meta property="og:description" content="常用Linux命令的基本使用目标 理解学习 Linux 终端命令的原因 常用 Linux 命令体验  01. 学习 Linux 终端命令的原因 Linux 刚面世时并没有图形界面，所有的操作全靠命令完成，如 磁盘操作、文件存取、目录操作、进程管理、文件权限 设定等 在职场中，大量的 服务器维护工作 都是在 远程 通过 SSH 客户端 来完成的，并没有图形界面，所有的维护工作都需要通过命令来完成">
+<meta property="og:description" content="远程管理常用命令">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-23T12:22:53.967Z">
+<meta property="og:image" content="http://smallblack.club/2018/10/23/远程管理常用命令/001_SSH.png">
+<meta property="og:image" content="http://smallblack.club/2018/10/23/远程管理常用命令/002_SCP示意图.png">
+<meta property="og:image" content="http://smallblack.club/2018/10/23/远程管理常用命令/003_SSH%20免密码示意图.png">
+<meta property="og:updated_time" content="2018-10-23T13:15:53.834Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用Linux命令的基本使用">
-<meta name="twitter:description" content="常用Linux命令的基本使用目标 理解学习 Linux 终端命令的原因 常用 Linux 命令体验  01. 学习 Linux 终端命令的原因 Linux 刚面世时并没有图形界面，所有的操作全靠命令完成，如 磁盘操作、文件存取、目录操作、进程管理、文件权限 设定等 在职场中，大量的 服务器维护工作 都是在 远程 通过 SSH 客户端 来完成的，并没有图形界面，所有的维护工作都需要通过命令来完成">
+<meta name="twitter:title" content="远程管理常用命令">
+<meta name="twitter:description" content="远程管理常用命令">
+<meta name="twitter:image" content="http://smallblack.club/2018/10/23/远程管理常用命令/001_SSH.png">
 
 
 
@@ -143,13 +147,13 @@
 
 
 
-  <link rel="canonical" href="http://smallblack.club/2018/10/16/常用的Linux命令的基本使用/"/>
+  <link rel="canonical" href="http://smallblack.club/2018/10/23/远程管理常用命令/"/>
 
 
 
 
 
-  <title>常用Linux命令的基本使用 </title>
+  <title>远程管理常用命令 </title>
   
 
 
@@ -342,7 +346,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://smallblack.club/2018/10/16/常用的Linux命令的基本使用/">
+    <link itemprop="mainEntityOfPage" href="http://smallblack.club/2018/10/23/远程管理常用命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="9911">
@@ -359,7 +363,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">常用Linux命令的基本使用</h2>
+          <h2 class="post-title" itemprop="name headline">远程管理常用命令</h2>
         
 
         <div class="post-meta">
@@ -371,8 +375,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-16T15:02:00+08:00">
-                2018-10-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-23T15:03:00+08:00">
+                2018-10-23
               </time>
             
 
@@ -411,7 +415,7 @@
 
           
           
-             <span id="/2018/10/16/常用的Linux命令的基本使用/" class="leancloud_visitors" data-flag-title="常用Linux命令的基本使用">
+             <span id="/2018/10/23/远程管理常用命令/" class="leancloud_visitors" data-flag-title="远程管理常用命令">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -436,7 +440,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  813
+                  2.1k
                 </span>
               
 
@@ -452,7 +456,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  7
                 </span>
               
             </div>
@@ -473,25 +477,27 @@
       
 
       
-        <a id="more"></a>
-<h1 id="常用Linux命令的基本使用"><a href="#常用Linux命令的基本使用" class="headerlink" title="常用Linux命令的基本使用"></a>常用Linux命令的基本使用</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
-<li>理解学习 Linux 终端命令的原因</li>
-<li>常用 Linux 命令体验</li>
-</ul>
-<h2 id="01-学习-Linux-终端命令的原因"><a href="#01-学习-Linux-终端命令的原因" class="headerlink" title="01. 学习 Linux 终端命令的原因"></a>01. 学习 Linux 终端命令的原因</h2><ul>
-<li>Linux 刚面世时并没有图形界面，所有的操作全靠命令完成，如 <strong>磁盘操作</strong>、<strong>文件存取</strong>、<strong>目录操作</strong>、<strong>进程管理</strong>、<strong>文件权限</strong> 设定等</li>
-<li>在职场中，大量的 <strong>服务器维护工作</strong> 都是在 <strong>远程</strong> 通过 <strong>SSH 客户端</strong> 来完成的，并没有图形界面，所有的维护工作都需要通过命令来完成</li>
-<li>在职场中，作为后端程序员，必须要或多或少的掌握一些 Linux 常用的终端命令</li>
-<li>Linux 发行版本的命令大概有 200 多个，但是常用的命令只有 10 多个而已</li>
-</ul>
-<blockquote>
-<p>学习终端命令的技巧：</p>
-<ul>
-<li>不需要死记硬背，对于常用命令，用的多了，自然就记住了</li>
-<li>不要尝试一次学会所有的命令，有些命令是非常不常用的，临时遇到，临时百度就可以</li>
-</ul>
+        <blockquote>
+<center>远程管理常用命令</center>
 </blockquote>
-<h2 id="02-常用-Linux-命令的基本使用"><a href="#02-常用-Linux-命令的基本使用" class="headerlink" title="02. 常用 Linux 命令的基本使用"></a>02. 常用 Linux 命令的基本使用</h2><table>
+<a id="more"></a>
+<h1 id="远程管理常用命令"><a href="#远程管理常用命令" class="headerlink" title="远程管理常用命令"></a>远程管理常用命令</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li>关机/重启<ul>
+<li><code>shutdown</code></li>
+</ul>
+</li>
+<li>查看或配置网卡信息<ul>
+<li><code>ifconfig</code></li>
+<li><code>ping</code></li>
+</ul>
+</li>
+<li>远程登录和复制文件<ul>
+<li><code>ssh</code></li>
+<li><code>scp</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="01-关机-重启"><a href="#01-关机-重启" class="headerlink" title="01. 关机/重启"></a>01. 关机/重启</h2><table>
 <thead>
 <tr>
 <th>序号</th>
@@ -503,139 +509,284 @@
 <tbody>
 <tr>
 <td>01</td>
-<td>ls</td>
-<td>list</td>
-<td>查看当前文件夹下的内容</td>
-</tr>
-<tr>
-<td>02</td>
-<td>pwd</td>
-<td>print wrok directory</td>
-<td>查看当前所在文件夹</td>
-</tr>
-<tr>
-<td>03</td>
-<td>cd [目录名]</td>
-<td>change directory</td>
-<td>切换文件夹</td>
-</tr>
-<tr>
-<td>04</td>
-<td>touch [文件名]</td>
-<td>touch</td>
-<td>如果文件不存在，新建文件</td>
-</tr>
-<tr>
-<td>05</td>
-<td>mkdir [目录名]</td>
-<td>make directory</td>
-<td>创建目录</td>
-</tr>
-<tr>
-<td>06</td>
-<td>rm [文件名]</td>
-<td>remove</td>
-<td>删除指定的文件名</td>
-</tr>
-<tr>
-<td>07</td>
-<td>clear</td>
-<td>clear</td>
-<td>清屏</td>
+<td>shutdown 选项 时间</td>
+<td>shutdown</td>
+<td>关机／重新启动</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>小技巧</p>
-<ul>
-<li><code>ctrl +  shift  +</code>    终端字体放大  </li>
-<li><code>ctrl   shift  -</code>      终端字体缩小</li>
+<h3 id="1-1-shutdown"><a href="#1-1-shutdown" class="headerlink" title="1.1 shutdown"></a>1.1 <code>shutdown</code></h3><ul>
+<li><code>shutdown</code> 命令可以 <strong>安全</strong> <strong>关闭</strong> 或者 <strong>重新启动系统</strong></li>
 </ul>
-</blockquote>
-<h3 id="03-自动补全"><a href="#03-自动补全" class="headerlink" title="03. 自动补全"></a>03. 自动补全</h3><ul>
-<li>在敲出<code>文件</code>/<code>目录</code>/<code>命令</code>的前几个字母之后，按下<code>tab</code><ul>
-<li>如果输入的没有歧义，系统会自动补全</li>
-<li>如果还存在其他 <code>文件</code>／<code>目录</code>／<code>命令</code>，再按一下 <code>tab</code> 键，系统会提示可能存在的命令</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>小技巧</p>
-<ul>
-<li>按 <code>上</code>／<code>下</code> 光标键可以在曾经使用过的命令之间来回切换</li>
-<li>如果想要退出选择，并且不想执行当前选中的命令，可以按 <code>ctrl + c</code></li>
-</ul>
-</blockquote>
-<ul>
-<li><code>cd</code>                返回home目录</li>
-<li><code>cd ~</code>            返回home目录</li>
-<li><code>cd -</code>        切换最近两次目录之间切换</li>
-</ul>
-<h2 id="01-终端命令格式"><a href="#01-终端命令格式" class="headerlink" title="01.终端命令格式"></a>01.终端命令格式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> [-options] [parameter]</span><br></pre></td></tr></table></figure>
-<p>说明：</p>
-<ul>
-<li><code>command</code>：命令名，相应功能的英文单词或单词的缩写</li>
-<li><code>[-options]</code>：选项，可用来对命令进行控制，也可以省略</li>
-<li><code>parameter</code>：传给命令的参数，可以是 <strong>零个</strong>、<strong>一个</strong> 或者 <strong>多个</strong></li>
-</ul>
-<blockquote>
-<p><code>[]</code> 代表可选</p>
-</blockquote>
-<h2 id="02-查阅命令帮助信息（知道）"><a href="#02-查阅命令帮助信息（知道）" class="headerlink" title="02. 查阅命令帮助信息（知道）"></a>02. 查阅命令帮助信息（知道）</h2><blockquote>
-<p>提示</p>
-<ul>
-<li>现阶段只需要 <strong>知道</strong> 通过以下两种方式可以查询命令的帮助信息</li>
-<li>先学习<strong>常用命令</strong>及<strong>常用选项</strong>的使用即可，工作中如果遇到问题可以借助 <strong>网络搜索</strong></li>
-</ul>
-</blockquote>
-<h3 id="2-1-–help"><a href="#2-1-–help" class="headerlink" title="2.1 –help"></a>2.1 –help</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
-<p>说明：</p>
-<ul>
-<li>显示 <code>command</code> 命令的帮助信息</li>
-</ul>
-<h3 id="2-2-man"><a href="#2-2-man" class="headerlink" title="2.2 man"></a>2.2 man</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man <span class="built_in">command</span></span><br></pre></td></tr></table></figure>
-<p>说明：</p>
-<ul>
-<li>查阅 <code>command</code> 命令的使用手册</li>
-</ul>
-<blockquote>
-<p><code>man</code> 是 <strong>manual</strong> 的缩写，是 Linux 提供的一个 <strong>手册</strong>，包含了绝大部分的命令、函数的详细使用说明</p>
-</blockquote>
-<p>使用 <code>man</code> 时的操作键：</p>
 <table>
 <thead>
 <tr>
-<th>操作键</th>
-<th>功能</th>
+<th>选项</th>
+<th>含义</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>空格键</td>
-<td>显示手册页的下一屏</td>
-</tr>
-<tr>
-<td>Enter 键</td>
-<td>一次滚动手册页的一行</td>
-</tr>
-<tr>
-<td>b</td>
-<td>回滚一屏</td>
-</tr>
-<tr>
-<td>f</td>
-<td>前滚一屏</td>
-</tr>
-<tr>
-<td>q</td>
-<td>退出</td>
-</tr>
-<tr>
-<td>/word</td>
-<td>搜索 <strong>word</strong> 字符串</td>
+<td>-r</td>
+<td>重新启动</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>提示：</p>
+<ul>
+<li><strong>不指定选项和参数</strong>，默认表示 <strong>1 分钟</strong>之后 <strong>关闭电脑</strong></li>
+<li>远程维护服务器时，最好不要关闭系统，而应该重新启动系统</li>
+</ul>
+</blockquote>
+<ul>
+<li>常用命令示例</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 重新启动操作系统，其中 now 表示现在</span></span><br><span class="line">$ shutdown -r now</span><br><span class="line"></span><br><span class="line"><span class="comment"># 立刻关机，其中 now 表示现在</span></span><br><span class="line">$ shutdown now</span><br><span class="line"></span><br><span class="line"><span class="comment"># 系统在今天的 20:25 会关机</span></span><br><span class="line">$ shutdown 20:25</span><br><span class="line"></span><br><span class="line"><span class="comment"># 系统再过十分钟后自动关机</span></span><br><span class="line">$ shutdown +10</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消之前指定的关机计划</span></span><br><span class="line">$ shutdown -c</span><br></pre></td></tr></table></figure>
+<h2 id="02-查看或配置网卡信息"><a href="#02-查看或配置网卡信息" class="headerlink" title="02. 查看或配置网卡信息"></a>02. 查看或配置网卡信息</h2><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>对应英文</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>ifconfig</td>
+<td>configure a network interface</td>
+<td>查看/配置计算机当前的网卡配置信息</td>
+</tr>
+<tr>
+<td>02</td>
+<td>ping ip地址</td>
+<td>ping</td>
+<td>检测到目标 ip地址 的连接是否正常</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-1-网卡-和-IP-地址"><a href="#2-1-网卡-和-IP-地址" class="headerlink" title="2.1 网卡 和 IP 地址"></a>2.1 网卡 和 IP 地址</h3><h4 id="网卡"><a href="#网卡" class="headerlink" title="网卡"></a>网卡</h4><ul>
+<li>网卡是一个专门负责网络通讯的硬件设备</li>
+<li><strong>IP 地址</strong>是设置在网卡上的地址信息</li>
+</ul>
+<blockquote>
+<p>我们可以把 <strong>电脑</strong> 比作 <strong>电话</strong>，<strong>网卡</strong> 相当于 <strong>SIM 卡</strong>，<strong>IP 地址</strong> 相当于 <strong>电话号码</strong></p>
+</blockquote>
+<h4 id="IP-地址"><a href="#IP-地址" class="headerlink" title="IP 地址"></a>IP 地址</h4><ul>
+<li><strong>每台联网的电脑上</strong>都有 <strong>IP 地址</strong>，<strong>是保证电脑之间正常通讯的重要设置</strong></li>
+</ul>
+<blockquote>
+<p>注意：每台电脑的 IP 地址不能相同，否则会出现 IP 地址冲突，并且没有办法正常通讯</p>
+<p>提示：有关 <strong>IP 地址</strong>的详细内容，在就业班会详细讲解！</p>
+</blockquote>
+<h3 id="2-2-ifconfig"><a href="#2-2-ifconfig" class="headerlink" title="2.2 ifconfig"></a>2.2 <code>ifconfig</code></h3><ul>
+<li><code>ifconfig</code> 可以查看／配置计算机当前的网卡配置信息</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看网卡配置信息</span></span><br><span class="line">$ ifconfig</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看网卡对应的 IP 地址</span></span><br><span class="line">$ ifconfig | grep inet</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>提示：一台计算机中有可能会有一个 <strong>物理网卡</strong> 和 <strong>多个虚拟网卡</strong>，在 Linux 中物理网卡的名字通常以 <code>ensXX</code> 表示</p>
+</blockquote>
+<ul>
+<li><code>127.0.0.1</code> 被称为 <strong>本地回环/环回地址</strong>，一般用来测试本机网卡是否正常</li>
+</ul>
+<h3 id="2-3-ping"><a href="#2-3-ping" class="headerlink" title="2.3 ping"></a>2.3 <code>ping</code></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检测到目标主机是否连接正常</span></span><br><span class="line">$ ping IP地址</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检测本地网卡工作正常</span></span><br><span class="line">$ ping 127.0.0.1</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>ping</code> 一般用于检测当前计算机到目标计算机之间的网络 <strong>是否通畅</strong>，<strong>数值越大，速度越慢</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><code>ping</code> 的工作原理与潜水艇的声纳相似，<code>ping</code> 这个命令就是取自 <strong>声纳的声音</strong></li>
+<li>网络管理员之间也常将 <code>ping</code> 用作动词 —— <strong>ping 一下计算机X，看他是否开着</strong></li>
+</ul>
+</blockquote>
+<p>原理：网络上的机器都有 <strong>唯一确定的 IP 地址</strong>，我们给<strong>目标 IP 地址</strong>发送一个数据包，对方就要返回一个数据包，根据返回的数据包以及时间，我们可以确定目标主机的存在</p>
+<blockquote>
+<p>提示：在 Linux 中，想要终止一个终端程序的执行，绝大多数都可以使用 <code>CTRL + C</code></p>
+</blockquote>
+<h2 id="03-远程登录和复制文件"><a href="#03-远程登录和复制文件" class="headerlink" title="03. 远程登录和复制文件"></a>03. 远程登录和复制文件</h2><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>对应英文</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>ssh 用户名@ip</td>
+<td>secure shell</td>
+<td>关机／重新启动</td>
+</tr>
+<tr>
+<td>02</td>
+<td>scp 用户名@ip:文件名或路径 用户名@ip:文件名或路径</td>
+<td>secure copy</td>
+<td>远程复制文件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-1-ssh-基础（重点）"><a href="#3-1-ssh-基础（重点）" class="headerlink" title="3.1 ssh 基础（重点）"></a>3.1 <code>ssh</code> 基础（重点）</h3><p>在 Linux 中 SSH 是 <strong>非常常用</strong> 的工具，通过 <strong>SSH 客户端</strong> 我们可以连接到运行了 <strong>SSH 服务器</strong> 的远程机器上</p>
+<p><img src="/2018/10/23/远程管理常用命令/001_SSH.png" alt="001_SSH示意图">￼</p>
+<ul>
+<li><p><strong>SSH 客户端</strong>是一种使用 <code>Secure Shell（SSH）</code> 协议连接到远程计算机的软件程序</p>
+</li>
+<li><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">SSH</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>  是目前较可靠，</p>
+<p>  专为远程登录会话和其他网络服务</p>
+<p>  提供安全性的协议</p>
+<ul>
+<li>利用 <code>SSH 协议</code> 可以有效<strong>防止远程管理过程中的信息泄露</strong></li>
+<li>通过 <code>SSH 协议</code> 可以对所有传输的数据进行加密，也能够防止 DNS 欺骗和 IP 欺骗</li>
+</ul>
+<ul>
+<li><code>SSH</code> 的另一项优点是传输的数据可以是经过压缩的，所以可以加快传输的速度</li>
+</ul>
+<h4 id="1-域名-和-端口号"><a href="#1-域名-和-端口号" class="headerlink" title="1) 域名 和 端口号"></a>1) 域名 和 端口号</h4><h5 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h5><ul>
+<li>由一串 <strong>用点分隔</strong> 的名字组成，例如：<code>www.itcast.cn</code></li>
+<li>是 <strong>IP 地址</strong> 的别名，方便用户记忆</li>
+</ul>
+<h5 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h5><ul>
+<li><strong>IP 地址</strong>：通过 <strong>IP 地址</strong> 找到网络上的 <strong>计算机</strong></li>
+<li><strong>端口号</strong>：通过 <strong>端口号</strong> 可以找到 <strong>计算机上运行的应用程序</strong><ul>
+<li><strong>SSH 服务器</strong> 的默认端口号是 <code>22</code>，如果是默认端口号，在连接的时候，可以省略</li>
+</ul>
+</li>
+<li>常见服务端口号列表：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>服务</th>
+<th>端口号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>SSH 服务器</td>
+<td>22</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Web 服务器</td>
+<td>80</td>
+</tr>
+<tr>
+<td>03</td>
+<td>HTTPS</td>
+<td>443</td>
+</tr>
+<tr>
+<td>04</td>
+<td>FTP 服务器</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>提示：有关 <strong>端口号</strong>的详细内容，在就业班会详细讲解！</p>
+</blockquote>
+<h4 id="2-SSH-客户端的简单使用"><a href="#2-SSH-客户端的简单使用" class="headerlink" title="2) SSH 客户端的简单使用"></a>2) SSH 客户端的简单使用</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh [-p port] user@remote</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>user</code> 是在远程机器上的用户名，如果不指定的话默认为当前用户</li>
+<li><code>remote</code> 是远程机器的地址，可以是 <strong>IP</strong>／<strong>域名</strong>，或者是 <strong>后面会提到的别名</strong></li>
+<li><code>port</code> 是 <strong>SSH Server 监听的端口</strong>，如果不指定，就为默认值 <code>22</code></li>
+</ul>
+<blockquote>
+<p>提示：</p>
+<ul>
+<li>使用 <code>exit</code> 退出当前用户的登录</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li><code>ssh</code> 这个终端命令只能在 <code>Linux</code> 或者 <code>UNIX</code> 系统下使用</li>
+<li>如果在 <code>Windows</code> 系统中，可以安装 <code>PuTTY</code> 或者 <code>XShell</code> 客户端软件即可</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>在工作中，SSH 服务器的端口号很有可能<strong>不是 22</strong>，如果遇到这种情况就需要使用 <code>-p</code> 选项，指定正确的端口号，否则无法正常连接到服务器</li>
+</ul>
+</blockquote>
+<h4 id="3-Windows-下-SSH-客户端的安装"><a href="#3-Windows-下-SSH-客户端的安装" class="headerlink" title="3) Windows 下 SSH 客户端的安装"></a>3) Windows 下 SSH 客户端的安装</h4><ul>
+<li><p><code>Putty</code><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="noopener">下载链接</a></p>
+</li>
+<li><p><code>Xshell</code><a href="https://www.netsarang.com/download/main.html" target="_blank" rel="noopener">下载链接</a> 注意选择免费版本下载</p>
+</li>
+</ul>
+<blockquote>
+<p>建议从官方网站下载正式的安装程序</p>
+</blockquote>
+<h3 id="3-2-scp（掌握）"><a href="#3-2-scp（掌握）" class="headerlink" title="3.2 scp（掌握）"></a>3.2 <code>scp</code>（掌握）</h3><ul>
+<li>scp 就是 <code>secure copy</code>，是一个在 Linux 下用来进行 <strong>远程拷贝文件</strong> 的命令</li>
+<li>它的<strong>地址格式与 ssh 基本相同</strong>，<strong>需要注意的是</strong>，在指定端口时用的是大写的 <code>-P</code> 而不是小写的</li>
+</ul>
+<p><img src="/2018/10/23/远程管理常用命令/002_SCP示意图.png" alt="002_SCP示意图">￼</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 把本地当前目录下的 01.py 文件 复制到 远程 家目录下的 Desktop/01.py</span></span><br><span class="line"><span class="comment"># 注意：`:` 后面的路径如果不是绝对路径，则以用户的家目录作为参照路径</span></span><br><span class="line">scp -P port 01.py user@remote:Desktop/01.py</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把远程 家目录下的 Desktop/01.py 文件 复制到 本地当前目录下的 01.py</span></span><br><span class="line">scp -P port user@remote:Desktop/01.py 01.py</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加上 -r 选项可以传送文件夹</span></span><br><span class="line"><span class="comment"># 把当前目录下的 demo 文件夹 复制到 远程 家目录下的 Desktop</span></span><br><span class="line">scp -r demo user@remote:Desktop</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把远程 家目录下的 Desktop 复制到 当前目录下的 demo 文件夹</span></span><br><span class="line">scp -r user@remote:Desktop demo</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-r</td>
+<td>若给出的源文件是目录文件，则 scp 将递归复制该目录下的所有子目录和文件，目标文件必须为一个目录名</td>
+</tr>
+<tr>
+<td>-P</td>
+<td>若远程 SSH 服务器的端口不是 22，需要使用大写字母 -P 选项指定端口</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意：</p>
+<ul>
+<li><code>scp</code> 这个终端命令只能在 <code>Linux</code> 或者 <code>UNIX</code> 系统下使用</li>
+<li>如果在 <code>Windows</code> 系统中，可以安装 <code>PuTTY</code>，使用 <code>pscp</code> 命令行工具或者安装 <code>FileZilla</code> 使用 <code>FTP</code> 进行文件传输</li>
+</ul>
+</blockquote>
+<h4 id="FileZilla"><a href="#FileZilla" class="headerlink" title="FileZilla"></a><code>FileZilla</code></h4><ul>
+<li>官方网站：<a href="https://filezilla-project.org/download.php?show_all=1" target="_blank" rel="noopener">传送门</a></li>
+<li><code>FileZilla</code> 在传输文件时，使用的是 <code>FTP 服务</code> 而不是 <code>SSH 服务</code>，因此端口号应该设置为 <code>21</code></li>
+</ul>
+<h3 id="3-3-SSH-高级（知道）"><a href="#3-3-SSH-高级（知道）" class="headerlink" title="3.3 SSH 高级（知道）"></a>3.3 SSH 高级（知道）</h3><ul>
+<li>免密码登录</li>
+<li>配置别名</li>
+</ul>
+<blockquote>
+<p>提示：有关 SSH 配置信息都保存在用户家目录下的 <code>.ssh</code> 目录下</p>
+</blockquote>
+<h4 id="1）免密码登录"><a href="#1）免密码登录" class="headerlink" title="1）免密码登录"></a>1）免密码登录</h4><h5 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h5><ul>
+<li>配置公钥<ul>
+<li>执行 <code>ssh-keygen</code> 即可生成 SSH 钥匙，一路回车即可</li>
+</ul>
+</li>
+<li>上传公钥到服务器<ul>
+<li>执行 <code>ssh-copy-id -p port user@remote</code>，可以让远程服务器记住我们的公钥</li>
+</ul>
+</li>
+</ul>
+<h5 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h5><p><img src="/2018/10/23/远程管理常用命令/003_SSH 免密码示意图.png" alt="003_SSH 免密码示意图">￼</p>
+<blockquote>
+<p>非对称加密算法</p>
+<ul>
+<li>使用 <strong>公钥</strong> 加密的数据，需要使用 <strong>私钥</strong> 解密</li>
+<li>使用 <strong>私钥</strong> 加密的数据，需要使用 <strong>公钥</strong> 解密</li>
+</ul>
+</blockquote>
+<h4 id="2-配置别名"><a href="#2-配置别名" class="headerlink" title="2) 配置别名"></a>2) 配置别名</h4><p>每次都输入 <code>ssh -p port user@remote</code>，时间久了会觉得很麻烦，特别是当 <code>user</code>, <code>remote</code> 和 <code>port</code> 都得输入，而且还不好记忆</p>
+<p>而 <strong>配置别名</strong> 可以让我们进一步偷懒，譬如用：<code>ssh mac</code> 来替代上面这么一长串，那么就在 <code>~/.ssh/config</code> 里面追加以下内容：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host mac</span><br><span class="line">    HostName ip地址</span><br><span class="line">   <span class="built_in"> User </span>itheima</span><br><span class="line">   <span class="built_in"> Port </span>22</span><br></pre></td></tr></table></figure>
+<p><strong>保存之后，即可用 ssh mac 实现远程登录了，scp 同样可以使用</strong></p>
 
       
     </div>
@@ -666,8 +817,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/16/文件和目录常用命令/" rel="next" title="文件和目录常用命令">
-                <i class="fa fa-chevron-left"></i> 文件和目录常用命令
+              <a href="/2018/10/23/用户权限常用命令/" rel="next" title="用户权限相关命令">
+                <i class="fa fa-chevron-left"></i> 用户权限相关命令
               </a>
             
           </div>
@@ -676,7 +827,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/16/系统信息相关命令/" rel="prev" title="系统信息相关命令">
+              <a href="/2018/10/23/系统信息相关命令/" rel="prev" title="系统信息相关命令">
                 系统信息相关命令 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -863,7 +1014,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用Linux命令的基本使用"><span class="nav-text">常用Linux命令的基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#目标"><span class="nav-text">目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#01-学习-Linux-终端命令的原因"><span class="nav-text">01. 学习 Linux 终端命令的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#02-常用-Linux-命令的基本使用"><span class="nav-text">02. 常用 Linux 命令的基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#03-自动补全"><span class="nav-text">03. 自动补全</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#01-终端命令格式"><span class="nav-text">01.终端命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#02-查阅命令帮助信息（知道）"><span class="nav-text">02. 查阅命令帮助信息（知道）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-–help"><span class="nav-text">2.1 –help</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-man"><span class="nav-text">2.2 man</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#远程管理常用命令"><span class="nav-text">远程管理常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#目标"><span class="nav-text">目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#01-关机-重启"><span class="nav-text">01. 关机/重启</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-shutdown"><span class="nav-text">1.1 shutdown</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#02-查看或配置网卡信息"><span class="nav-text">02. 查看或配置网卡信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-网卡-和-IP-地址"><span class="nav-text">2.1 网卡 和 IP 地址</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#网卡"><span class="nav-text">网卡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IP-地址"><span class="nav-text">IP 地址</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-ifconfig"><span class="nav-text">2.2 ifconfig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-ping"><span class="nav-text">2.3 ping</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#03-远程登录和复制文件"><span class="nav-text">03. 远程登录和复制文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-ssh-基础（重点）"><span class="nav-text">3.1 ssh 基础（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-域名-和-端口号"><span class="nav-text">1) 域名 和 端口号</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#域名"><span class="nav-text">域名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#端口号"><span class="nav-text">端口号</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-SSH-客户端的简单使用"><span class="nav-text">2) SSH 客户端的简单使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Windows-下-SSH-客户端的安装"><span class="nav-text">3) Windows 下 SSH 客户端的安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-scp（掌握）"><span class="nav-text">3.2 scp（掌握）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#FileZilla"><span class="nav-text">FileZilla</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-SSH-高级（知道）"><span class="nav-text">3.3 SSH 高级（知道）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1）免密码登录"><span class="nav-text">1）免密码登录</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#步骤"><span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#示意图"><span class="nav-text">示意图</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-配置别名"><span class="nav-text">2) 配置别名</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -901,7 +1052,7 @@
     
       <span class="post-meta-item-text">博文总字数&#58;</span>
     
-    <span title="博文总字数">13.1k</span>
+    <span title="博文总字数">13.2k</span>
   
   
 
