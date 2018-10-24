@@ -110,10 +110,13 @@
 <meta property="og:site_name" content="9911">
 <meta property="og:description" content="使用hexo遇到的问题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-17T12:23:43.398Z">
+<meta property="og:image" content="http://smallblack.club/2018/10/17/列出一些本人使用hexo遇到的问题/域名解析.png">
+<meta property="og:image" content="http://smallblack.club/2018/10/17/列出一些本人使用hexo遇到的问题/ip查看.png">
+<meta property="og:updated_time" content="2018-10-24T05:15:09.277Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo遇到的问题">
 <meta name="twitter:description" content="使用hexo遇到的问题">
+<meta name="twitter:image" content="http://smallblack.club/2018/10/17/列出一些本人使用hexo遇到的问题/域名解析.png">
 
 
 
@@ -436,7 +439,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  126
+                  435
                 </span>
               
 
@@ -479,7 +482,21 @@
 <a id="more"></a>
 <hr>
 <p>列举一些曾经困扰到我的hexo问题，希望能帮助更多新人。</p>
-<h2 id="Hexo-部署到-Github-Pages-文件夹大小写问题"><a href="#Hexo-部署到-Github-Pages-文件夹大小写问题" class="headerlink" title="Hexo 部署到 Github Pages 文件夹大小写问题"></a>Hexo 部署到 Github Pages 文件夹大小写问题</h2><p>我是参考作者<a href="http://1mhz.me/" target="_blank" rel="noopener">Yizhao</a>的<a href="http://1mhz.me/2015/hexo-deploy-case-sensitive/" target="_blank" rel="noopener">Hexo 部署到 Github Pages 文件夹大小写问题</a><br>注意：我只参照了这一句，了进入到博客项目中 .deploy_git文件夹，修改 .git 下的 config 文件，将 ignorecase=true 改为 ignorecase=false 。最后成功解决问题，感谢。</p>
+<h2 id="1-Hexo-部署到-Github-Pages-文件夹大小写问题？"><a href="#1-Hexo-部署到-Github-Pages-文件夹大小写问题？" class="headerlink" title="1 Hexo 部署到 Github Pages 文件夹大小写问题？"></a>1 Hexo 部署到 Github Pages 文件夹大小写问题？</h2><p>我是参考作者<a href="http://1mhz.me/" target="_blank" rel="noopener">Yizhao</a>的<a href="http://1mhz.me/2015/hexo-deploy-case-sensitive/" target="_blank" rel="noopener">Hexo 部署到 Github Pages 文件夹大小写问题</a><br>注意：我只参照了这一句，进入到博客项目中 .deploy_git文件夹，修改 .git 下的 config 文件，将 <code>ignorecase=true</code> 改为 <code>ignorecase=false</code> 最后成功解决问题。</p>
+<h2 id="2-关于如何设置Hexo指定不进行渲染的文件问题？"><a href="#2-关于如何设置Hexo指定不进行渲染的文件问题？" class="headerlink" title="2 关于如何设置Hexo指定不进行渲染的文件问题？"></a>2 关于如何设置Hexo指定不进行渲染的文件问题？</h2><p><a href="https://blog.csdn.net/ganzhilin520/article/details/79057774" target="_blank" rel="noopener">Hexo不渲染.md或者.html</a></p>
+<p><a href="http://www.gagahappy.com/hexo-set-skip-render/" target="_blank" rel="noopener">hexo设置skip_render,指定不进行渲染的文件</a></p>
+<p><a href="https://www.maoxuner.cn/2017/03/10/hexo-skip-render.html" target="_blank" rel="noopener">Hexo渲染时排除部分文件或目录</a></p>
+<p>附上个人成功代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">skip_render: </span><br><span class="line"> - README.md</span><br><span class="line"> - baidu_verify_xxxxxxxxx.html</span><br></pre></td></tr></table></figure>
+<h2 id="3-关于Hexo个人博客站点被百度谷歌收录的细节问题？"><a href="#3-关于Hexo个人博客站点被百度谷歌收录的细节问题？" class="headerlink" title="3 关于Hexo个人博客站点被百度谷歌收录的细节问题？"></a>3 关于Hexo个人博客站点被百度谷歌收录的细节问题？</h2><p>详细方案<a href="https://blog.csdn.net/qq_32454537/article/details/79482914" target="_blank" rel="noopener">传送门</a></p>
+<p>推荐采用第二种方式，这种方式最简单在推送前一定要把验证文件设置不渲染，不然无法验证成功，设置不渲染方法参考上面的问题二。</p>
+<h2 id="4-关于如何实现利用Hexo-coding搭建博客，优化github博客打开速度"><a href="#4-关于如何实现利用Hexo-coding搭建博客，优化github博客打开速度" class="headerlink" title="4 关于如何实现利用Hexo+coding搭建博客，优化github博客打开速度"></a>4 关于如何实现利用Hexo+coding搭建博客，优化github博客打开速度</h2><p>关于如何配置请参考此篇博客<a href="https://blog.csdn.net/wkzd2016/article/details/70213330" target="_blank" rel="noopener">传送门</a></p>
+<p>注意：如果已经绑定过github的话coding上面的SSL/TLS 安全证书授权会失败，解决办法如下图</p>
+<p><img src="/2018/10/17/列出一些本人使用hexo遇到的问题/域名解析.png" alt="域名解析"></p>
+<p>需要先把github的解析关闭等待五分钟，然后再认证coding证书，认证完毕后就能正常访问，负责无法在国内访问你的博客。认证完毕使用<code>ping</code>查看ip地址如下图</p>
+<p><img src="/2018/10/17/列出一些本人使用hexo遇到的问题/ip查看.png" alt="Ping"></p>
+<p>至此博客域名解析成功。</p>
+<p>如果有不对的地方希望多多留言，Thanks♪(･ω･)ﾉ。</p>
 <p>以后遇到问题会更新此文章。</p>
 
       
@@ -608,7 +625,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -708,7 +725,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-部署到-Github-Pages-文件夹大小写问题"><span class="nav-text">Hexo 部署到 Github Pages 文件夹大小写问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Hexo-部署到-Github-Pages-文件夹大小写问题？"><span class="nav-text">1 Hexo 部署到 Github Pages 文件夹大小写问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-关于如何设置Hexo指定不进行渲染的文件问题？"><span class="nav-text">2 关于如何设置Hexo指定不进行渲染的文件问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-关于Hexo个人博客站点被百度谷歌收录的细节问题？"><span class="nav-text">3 关于Hexo个人博客站点被百度谷歌收录的细节问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-关于如何实现利用Hexo-coding搭建博客，优化github博客打开速度"><span class="nav-text">4 关于如何实现利用Hexo+coding搭建博客，优化github博客打开速度</span></a></li></ol></div>
             
 
           </div>
@@ -746,7 +763,7 @@
     
       <span class="post-meta-item-text">博文总字数&#58;</span>
     
-    <span title="博文总字数">13.2k</span>
+    <span title="博文总字数">13.7k</span>
   
   
 
