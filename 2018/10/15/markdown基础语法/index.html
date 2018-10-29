@@ -111,7 +111,7 @@
 <meta property="og:description" content="记录关于一些关于Markdown的基础语法">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=702257389,1274025419&fm=27&gp=0.jpg">
-<meta property="og:updated_time" content="2018-10-16T12:21:54.856Z">
+<meta property="og:updated_time" content="2018-10-29T02:28:03.176Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown基础语法">
 <meta name="twitter:description" content="记录关于一些关于Markdown的基础语法">
@@ -559,7 +559,7 @@ title可加可不加
 </code></pre><p>示例：</p>
 <pre><code>[简书](http://jianshu.com)
 [百度](http://baidu.com)
-</code></pre><p>效果如下：<br>    <a href="http://jianshu.com" target="_blank" rel="noopener">简书</a><br>    <a href="http://baidu.com" target="_blank" rel="noopener">百度</a></p>
+</code></pre><p>效果如下：<br>​    <a href="http://jianshu.com" target="_blank" rel="noopener">简书</a><br>​    <a href="http://baidu.com" target="_blank" rel="noopener">百度</a></p>
 <p>注：markdown本身语法不支持链接在新页面中打开，貌似简书做了处理，是可以的。别的平台可能就不行了，如果想要在新页面中打开的话可以用html语言的a标签代替。</p>
 <pre><code>&lt;a href=&quot;超链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;
 
@@ -663,11 +663,12 @@ title可加可不加
 <h1 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h1><p>语法：<br>单行代码：代码之间分别用一个反引号包起来</p>
 <pre><code>`代码内容`
 </code></pre><p>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">代码...</span><br><span class="line">代码...</span><br><span class="line">代码...</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">（```）代码...</span><br><span class="line">代码...</span><br><span class="line">代码...（```）</span><br></pre></td></tr></table></figure>
 <pre><code>注：为了防止转译，前后三个反引号处加了小括号，实际是没有的。这里只是用来演示，实际中去掉两边小括号即可。
 </code></pre><p>示例：</p>
 <p>单行代码</p>
-<p><code>create database hero;</code><br>代码块<br>    <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function <span class="function"><span class="title">fun</span><span class="params">()</span></span>&#123;</span><br><span class="line">     echo <span class="string">"这是一句非常牛逼的代码"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="title">fun</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p><code>create database hero</code><br>代码块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(```)</span><br><span class="line">function fun()&#123;</span><br><span class="line">         echo <span class="string">"这是一句非常牛逼的代码"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    fun();</span><br><span class="line">    (```)</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
 <p>单行代码</p>
 <pre><code>create database hero;
@@ -678,7 +679,8 @@ title可加可不加
 fun();
 </code></pre><h1 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h1><div id="flowchart-0" class="flow-chart"></div>
 
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">chat
+
+<p><code>`</code><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">chat
 st=>start: 开始
 op=>operation: My Operation
 cond=>condition: Yes or No?
