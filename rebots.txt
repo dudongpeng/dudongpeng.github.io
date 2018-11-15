@@ -5,5 +5,5 @@ Allow: /archives/
 Disallow: /fonts/
 Disallow: /vendors/
 
-Sitemap: http://www.smallblack.club/sitemap.xml
-Sitemap: http://www.smallblack.club/baidusitemap.xml
+Sitemap: https://www.smallblack.club/sitemap.xml
+Sitemap: https://www.smallblack.club/baidusitemap.xml
