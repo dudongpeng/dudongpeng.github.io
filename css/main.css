@@ -1883,7 +1883,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #175062;
+  background: #ffedc8;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2897,6 +2897,13 @@ span#inline-toc {
   padding: 0.05em 0.4em;
   margin: 2px 5px 2px 0px;
   line-height: 1.5;
+}
+.wp_rating {
+  height: auto;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 20px;
+  padding-top: 6px;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
